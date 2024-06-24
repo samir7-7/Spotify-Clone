@@ -15,6 +15,7 @@
 
 .left{
     display: flex;
+    /* position: fixed; */
     flex-direction: column;
     width: 25vw;
     height: 100vh;
@@ -97,6 +98,9 @@
     border-radius: 10px;
     padding: 25px;
     height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 button img{
@@ -121,7 +125,7 @@ button img{
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    gap: 20px;
+    gap: 30px;
 }
 
 .scrool:hover{
@@ -153,6 +157,60 @@ button img{
     cursor: pointer;
 }
 
+.nav>img{
+    filter: invert(1);
+}
+.nav>button{
+    background-color: black;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.nav{
+    display: flex;
+    gap: 20px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0px;
+    width: 95%;
+    align-items: center;
+    padding: 10px;
+}
+
+.buttonss{
+    display: flex;
+    gap: 30px;
+}
+.btn1{
+    font-family: "Roboto", sans-serif;
+    color: lightgrey;
+    background: none;
+    border: none;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn2{
+    color: black;
+    border: none;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    padding: 15px 30px;
+    border-radius: 25px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
 
 
 
