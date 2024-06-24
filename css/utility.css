@@ -1,0 +1,16 @@
+.flex{
+    display: flex;
+}
+
+.border{
+    border: 2px solid purple;
+    margin: 4px;
+}
+
+.align-items{
+    align-items: center;
+}
+
+.jc{
+    justify-content: center;
+}
