@@ -21,14 +21,14 @@
     height: 100vh;
     padding: 8px;
     gap: 8px;
-    background-color: pink;
+    background-color: black;
 }
 
 .right{
     width: 75vw;
     height: 100vh;
     padding: 8px 0px;
-    background-color: pink;
+    background-color: black;
     margin-left: 26vw;
    
 }
@@ -297,5 +297,23 @@ button img{
 .circle i{
     color: #242424;
 }
+
+.footer>span{
+    color: #ffff;
+    font-family: "Roboto", sans-serif;
+    color: grey;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.footer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 320px;
+    gap: 20px;
+}
+
+
+
 
 

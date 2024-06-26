@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+            background-color: blue;
+            overflow: hidden;
+        }
+
+        .box1{
+            height: 50px;
+            width: 200px;
+            position:relative;
+            top: 10vh;
+            left: 5vw;
+        }
+
+        .box2{
+            height: 50px;
+            width: 200px;
+            position:relative;
+            top: 15vh;
+            right: 5vw;
+        }
+
+        .box3{
+            height: 50px;
+            width: 200px;
+            position:relative;
+            top: 8vh;
+            left: 15vw;
+        }
+
+        .box4{
+            height: 50px;
+            width: 200px;
+            position:relative;
+            top: 150px;
+            left: 5vw;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1">Home</div>
+        <div class="box2">about</div>
+        <div class="box3"> services</div>
+        <div class="box4">  Contact</div>
+        <button id="btn">Click Me</button>
+    </div>
+    <script>
+        document.getElementById("btn").addEventListener("click",()=>{
+            document.querySelector("box1").classList.add("animation")
+        });
+        
+    </script>
+</body>
+</html>

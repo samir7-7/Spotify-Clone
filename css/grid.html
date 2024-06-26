@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        .parent{
+            /* display: grid;
+            grid-template-areas:    "nav nav button "
+                                    "left left right "
+                                    "left left right"
+                                    "main main main"
+                                    "footer footer footer";
+
+            height: 100vh;
+            width: 100vw; */
+        }
+        .one{
+            background-color: blueviolet;
+            grid-area: nav;
+            width: 200px;
+            height: 200px;
+        }
+        .two{
+
+            background-color: brown;
+            grid-area: left;
+             width: 200px;
+            height: 200px;
+
+        }
+        .three{
+            background-color: bisque;
+            grid-area: right;
+             width: 200px;
+            height: 200px;
+        }
+
+        .four{
+            background-color: rgb(117, 207, 207);
+            grid-area: main;
+             width: 200px;
+            height: 200px;
+        }
+        .five{
+            background-color: rgb(43, 73, 43);
+            grid-area: footer;
+             width: 200px;
+            height: 200px;
+        }
+        .wildcard{
+            grid-area: button;
+            background-color: yellow;
+             width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="one">1</div>
+        <div class="wildcard">W</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+        <div class="four">4</div>
+        <div class="five">5</div>
+    </div>
+</body>
+</html>
