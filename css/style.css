@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-*{
+
+* {
     padding: 0;
     margin: 0;
 }
@@ -9,11 +10,12 @@
     color: #fff; 
 } */
 
-.container{
+.container {
     background-color: black;
+    overflow-x: hidden;
 }
 
-.left{
+.left {
     display: flex;
     position: fixed;
     flex-direction: column;
@@ -24,16 +26,18 @@
     background-color: black;
 }
 
-.right{
+.right {
     width: 75vw;
     height: 100vh;
     padding: 8px 0px;
     background-color: black;
     margin-left: 26vw;
-   
+    position: relative;
+
 }
 
-.home ul li,.library .front ul li{
+.home ul li,
+.library .front ul li {
     width: 100%;
     display: flex;
     gap: 10px;
@@ -44,9 +48,10 @@
     font-size: 16px;
 }
 
-.front ul li{
+.front ul li {
     padding: 0;
 }
+
 /* .library ul li{
     width: 25px;
     display: flex;
@@ -57,17 +62,18 @@
     font-weight: 700;
 } */
 
-.home img{
+.home img {
     filter: invert(1);
 }
 
-.front{
+.front {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 90%;
 }
-.fleft{
+
+.fleft {
     display: flex;
     font-family: "Roboto", sans-serif;
     font-weight: 700;
@@ -75,11 +81,13 @@
     gap: 10px;
     align-items: center;
 }
-.front img{
+
+.front img {
     filter: invert(1);
 }
 
-.home,.library{
+.home,
+.library {
     background-color: #121212;
     color: #fff;
     border-radius: 10px;
@@ -90,13 +98,15 @@
 
 }
 
-.library{
+.library {
     width: 91%;
     height: 80%;
+    justify-content: flex-start;
     align-items: center;
+    gap: 15px;
 }
 
-.main{
+.main {
     background-color: #121212;
     color: #fff;
     border-radius: 10px;
@@ -106,26 +116,27 @@
     position: fixed;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
-button img{
+button img {
     filter: invert(1);
 }
 
-.btn{
+.btn {
     border: none;
     cursor: pointer;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: grey;
     padding: 3px;
     border-radius: 50%;
 }
 
-.scrool{
-    width: 105%;
-    height: 27%;
+.scrool {
+    width: 100%;
+    height: 25%;
     padding: 5px;
     display: flex;
     flex-direction: column;
@@ -133,11 +144,11 @@ button img{
     gap: 30px;
 }
 
-.scrool:hover{
+.scrool:hover {
     overflow-y: auto;
 }
 
-.box{
+.box {
     padding: 20px;
     border-radius: 10px;
     background-color: #242424;
@@ -147,12 +158,12 @@ button img{
     font-family: "Roboto", sans-serif;
 }
 
-.box p{
+.box p {
     font-size: 15px;
     margin-bottom: 5px;
 }
 
-.boxbtn{
+.boxbtn {
     width: fit-content;
     padding: 7px 10px;
     color: black;
@@ -162,10 +173,11 @@ button img{
     cursor: pointer;
 }
 
-.fa-solid{
+.fa-solid {
     color: #fff;
 }
-.nav>button{
+
+.nav>button {
     background-color: black;
     width: 30px;
     height: 30px;
@@ -176,29 +188,30 @@ button img{
     cursor: pointer;
 }
 
-.nav{
+.nav {
     display: flex;
     gap: 20px;
 }
 
-.header{
+.header {
     display: flex;
     justify-content: space-between;
     position: relative;
     top: 0px;
     z-index: 1;
-    width: 70%;
+    width: 95%;
     height: 5%;
     align-items: center;
-    padding: 10px;
+    padding: 20px 10px;
     /* background-color: pink; */
 }
 
-.buttonss{
+.buttonss {
     display: flex;
     gap: 30px;
 }
-.btn1{
+
+.btn1 {
     font-family: "Roboto", sans-serif;
     color: lightgrey;
     background: none;
@@ -208,7 +221,7 @@ button img{
     cursor: pointer;
 }
 
-.btn2{
+.btn2 {
     color: black;
     border: none;
     font-weight: 700;
@@ -220,17 +233,17 @@ button img{
     cursor: pointer;
 }
 
-.spotify-playlist{
+.spotify-playlist {
     overflow: hidden;
     font-family: "Roboto", sans-serif;
 }
 
-.spotify-playlist:hover{
+.spotify-playlist:hover {
     overflow-y: scroll;
-    
+
 }
 
-.cardcontainer{
+.cardcontainer {
     padding: 20px 0px;
     width: 75%;
     height: 100%;
@@ -239,44 +252,66 @@ button img{
     flex-wrap: wrap;
 }
 
-.card{
+.card {
     width: 190px;
     position: relative;
-    /* padding: 10px; */
+    padding: 10px;
+    height: 310px;
+    border-radius: 7px;
+    /* overflow: hidden;
+    white-space: nowrap; 
+    text-overflow: ellipsis;  */
 }
 
-.card *{
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #3f3f3f;
+    /* Dark-grey handle color */
+}
+
+::-webkit-scrollbar-track {
+    background-color: grey;
+    /* Grey track/bar color */
+}
+
+
+.card * {
     margin-top: 5px;
 }
 
-.card img{
+.card img {
     width: 100%;
     object-fit: contain;
     border-radius: 8px;
 }
 
-.card p{
+.card p {
     line-height: 20px;
     font-size: 12px;
     font-weight: 400;
 }
 
-.card h3{
+.card h3 {
     font-size: 16px;
     font-weight: 500;
 }
 
-.text{
+.text {
     padding: 10px;
     height: 20px;
     text-overflow: ellipsis;
 }
 
-.image>img{
+.image>img {
     border-radius: 7px;
 }
 
-.circle{
+.circle {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -292,28 +327,182 @@ button img{
     transition: all 1sec ease-out;
 }
 
+.card:hover {
+    background-color: rgba(47, 46, 46, 0.462);
+    border-radius: 7px;
+}
 
-
-.circle i{
+.circle i {
     color: #242424;
 }
 
-.footer>span{
+.footer>span {
     color: #ffff;
     font-family: "Roboto", sans-serif;
     color: grey;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 400;
 }
 
-.footer{
+.footer {
     display: flex;
     flex-wrap: wrap;
     width: 320px;
     gap: 20px;
 }
 
+.lbutton {
+    width: 100%;
+}
 
+.lbutton>button {
+    background-color: rgba(0, 0, 0, 0.192);
+    border: 0.2px solid #fff;
+    color: #fff;
+    padding: 3px 10px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 25px;
+}
 
+.lbutton>button * {
+    padding: 5px;
+}
 
+/* .lbutton>button i{
+    font-size: 20px;
+} */
 
+.lbutton>button:hover {
+    border: 2px solid #fff;
+    transform: scale(1.02);
+}
+
+.playbar{
+    position: fixed;
+    width: 69%;
+    height: 28px;
+    bottom: 30px;
+    color: #fff;
+    background-color: rgba(206, 204, 204, 0.803);
+    padding: 20px 10px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    filter: invert(1);
+   
+}
+
+.playbar h1{
+    color: #fff;
+}
+
+.playbar i{
+    color: black;
+}
+
+.sbuttons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.songs{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 95%;
+    gap: 15px;
+    font-family: "Roboto", sans-serif;
+    height: 30%;
+    overflow-y: hidden;
+    margin:20px 0;
+}
+
+.songs:hover{
+    overflow-y: scroll;
+}
+
+.songs ol{
+    padding: 10px;
+}
+
+.songs ol li{
+    display: flex;
+    gap: 34px;
+    padding: 12px 0;
+    cursor: pointer;
+    align-items: center;
+    border: 1px solid #fff;
+    padding: 10px;
+    margin: 10px 0;
+    width: 90%;
+    border-radius: 9px;
+    justify-content: space-between;
+}
+
+li img{
+    filter: invert(1);
+    width: 15px;
+    height: 25px;
+}
+
+.playnow{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    width: 60%;
+}
+
+.playnow span{
+    font-size: 15px;
+}
+
+h4:first-child{
+    font-size: 12px;
+    min-width: 100px;
+}
+
+.info:nth-child(2) p{
+    color: #757474;
+    font-size: 12px;
+}
+
+.seekbar{
+    width: 95%;
+    height: 1px;
+    border: 1px solid black;
+    background-color: black;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 15px;
+    cursor: pointer;
+}
+
+.scircle{
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    background-color: black;
+    position: relative;
+    bottom: 6px;
+    transition: 0.2s left;
+    left: 0%;
+}
+
+.together{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.together>div{
+    color: #0f0e0e;
+    font-family: "Roboto", sans-serif;
+    padding-bottom: 5px;
+}
+
+.moveleft{
+
+}

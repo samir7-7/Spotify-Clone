@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .items{
+            height: 100vh;
+            width: 100vw;
+            background-color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            transform-style: preserve-3d;
+            transform: perspective(10000px);
+        }
+
+        .item{
+            height: 20vh;
+            width: 6vw;
+            object-fit: contain;
+            transition: 0.3s;
+            filter: brightness(0);
+        }
+
+        .item:hover{
+            filter: brightness(1);
+            transform: translateZ(300px);
+        }
+
+        .item:hover +*{
+            filter: brightness(0.6);
+            transform: translateZ(150px) rotateY(40deg);
+        }
+
+        .item:hover +*+*{
+            filter: brightness(0.4);
+            transform: translateZ(70px) rotateY(20deg);
+        }
+
+        .item:hover +*+*+*{
+            filter: brightness(0.2);
+            transform: translateZ(40px) rotateY(10deg);
+        }
+
+        .item:has(+*:hover){
+            filter: brightness(0.6);
+            transform: translateZ(150px) rotateY(-40deg);
+        }
+
+        .item:has(+*+*:hover){
+            filter: brightness(0.4);
+            transform: translateZ(70px) rotateY(-20deg);
+        }
+
+        .item:has(+*+*+*:hover){
+            filter: brightness(0.2);
+            transform: translateZ(40px) rotateY(-10deg);
+        }
+
+        .item>img{
+            height: 20vh;
+            width: 6vw;
+            object-fit: cover;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="items">
+            <div class="item"><img src="https://imgix.ranker.com/list_img_v2/14797/1834797/original/the-best-dragon-anime-of-all-time-u1" alt=""></div>
+            <div class="item"><img src="https://th.bing.com/th/id/R.ca7f6d73055e1c6facbb135646281b35?rik=hdjY7giQ8nTk%2bg&pid=ImgRaw&r=0" alt=""></div>
+            <div class="item"><img src="https://static.displate.com/857x1200/displate/2023-12-10/bf8fa9ecd39446b693fb9d36cb2732e3_279d850a440d4aa73b7b87f36cf7c43e.jpg" alt=""></div>
+            <div class="item"><img src="https://i.pinimg.com/736x/9b/0a/a3/9b0aa378dff44d0c5d8194fc652434ae.jpg" alt=""></div>
+            <div class="item"><img src="https://th.bing.com/th/id/OIP.IHZOhSsa9gwXR6gYLautMAHaJk?w=1624&h=2100&rs=1&pid=ImgDetMain" alt=""></div>
+            <div class="item"><img src="https://i.pinimg.com/736x/98/cc/76/98cc76f5254a5c863dfba95175a0bbeb.jpg" alt=""></div>
+            <div class="item"><img src="https://th.bing.com/th/id/OIP.o9y57y66pSFBAJ10YLuLdQAAAA?w=351&h=626&rs=1&pid=ImgDetMain" alt=""></div> 
+        </div>
+    </main>
+    
+</body>
+</html>
